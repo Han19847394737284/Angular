@@ -1,20 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Routes
+import { APP_ROUTING } from './app.routes';
+
+
+//Services
+
+
+
+//Components
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { BodyComponent } from './components/body/body.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/share/header/header.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent,
-    FooterComponent
+    HomeComponent,
+    HeroesComponent,
+    AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
