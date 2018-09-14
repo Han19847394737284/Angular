@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/share/header/header.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { SearchHeroesComponent } from './components/search-heroes/search-heroes.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     HomeComponent,
     HeroesComponent,
     AboutComponent,
-    HeroeComponent
+    HeroeComponent,
+    SearchHeroesComponent
   ],
   imports: [
     BrowserModule,
