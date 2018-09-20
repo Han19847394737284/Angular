@@ -1,0 +1,5 @@
+<h1>Heroes Marvel y DC</h1>
+
+<div class="card-columns">
+  <app-heroe-cards *ngFor="let heroe of heroes; let i = index" [heroe]="heroe" [idx]="heroe.code" (heroeEmitter)="verHeroe($event)"></app-heroe-cards>
+</div>

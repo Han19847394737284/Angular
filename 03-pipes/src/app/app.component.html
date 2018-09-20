@@ -1,0 +1,184 @@
+<h1>PIPES</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <th>
+            VARIABLE
+        </th>
+        <th>
+            PIPE
+        </th>
+        <th>
+            PRODUCT
+        </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                {{uc}}
+            </td>
+            <td>
+                UpperCase
+            </td>
+            <td>
+                {{uc | uppercase}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{lc}}
+            </td>
+            <td>
+                LowerCase
+            </td>
+            <td>
+                {{lc | lowercase}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{slc}}
+            </td>
+            <td>
+                Slice with string (3)
+            </td>
+            <td>
+                {{slc | slice:3}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{slcArray}}
+            </td>
+            <td>
+                Slice with array (2:8)
+            </td>
+            <td>
+                {{slcArray | slice:2:8}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{number}}
+            </td>
+            <td>
+                Number with (1.3-5)
+            </td>
+            <td>
+                {{number | number:'1.3-5'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{percent}}
+            </td>
+            <td>
+                Percent
+            </td>
+            <td>
+                {{percent | percent}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{percent2}}
+            </td>
+            <td>
+                Percent with (2.3-3)
+            </td>
+            <td>
+                {{percent2 | percent:'2.3-3'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{salary}}
+            </td>
+            <td>
+                currency
+            </td>
+            <td>
+                {{salary | currency}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{salary}}
+            </td>
+            <td>
+                currency (EUR)
+            </td>
+            <td>
+                {{salary | currency:'EUR'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{salary}}
+            </td>
+            <td>
+                currency (EUR):true
+            </td>
+            <td>
+                {{salary | currency:'EUR':false}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{valuePromise}}
+            </td>
+            <td>
+                Async
+            </td>
+            <td>
+                {{valuePromise | async}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                Date
+            </td>
+            <td>
+                {{date | date}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                Date: 'medium'
+            </td>
+            <td>
+                {{date | date:'medium'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                Date: 'MMMM - dd'
+            </td>
+            <td>
+                {{date | date:'MMMM - dd'}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>SLICE WITH ARRAY A REPEAR *ngFor</h1>
+
+<ul>
+    <li *ngFor="let i of slcArray | slice:2:8">
+        {{i}}
+    </li>
+</ul>
+
+<h1>JSON</h1>
+<pre>
+    {{role | json}}
+</pre>
