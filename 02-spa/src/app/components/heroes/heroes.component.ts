@@ -24,6 +24,7 @@ export class HeroesComponent implements OnInit {
   }
 
   verHeroe(idx:number) {
+    console.log("Ejecutado evento desde HeroesComponent");
     this.router.navigate(['/heroe', idx]);
   }
 }

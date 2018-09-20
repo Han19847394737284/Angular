@@ -68,27 +68,22 @@ export class HeroesService {
     }
 
     searchHeroes(param:string):Heroe[]{
-      
       let listHeroes:Heroe[] = [];
-      for(let heroe:Heroe in this.dataHeroes) {
-        console.log(heroe.nombre);
-      }
-      /*let listHeroes:Heroe[] = [];
       param = param.toLowerCase();
-
-      for(let heroe in this.dataHeroes){
-        console.log(heroe)
-        let nombre = heroe.nombre.toLo;
-        if (nombre.indexOf(name) >= 0){
-          listHeroes.push(h);
+      for (let i = 0; i < this.dataHeroes.length; i++){
+        let nombre = this.dataHeroes[i].nombre.toLowerCase();
+        if(nombre.indexOf(param) >= 0){
+          this.dataHeroes[i].code = i;
+          listHeroes.push(this.dataHeroes[i]);
         }
-      }*/
+      }
 
       return listHeroes;
     }
 }
 
 export interface Heroe {
+    code?:number;
     nombre:String;
     bio:String;
     img:String;

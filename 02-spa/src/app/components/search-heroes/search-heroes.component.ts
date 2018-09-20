@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router'
 export class SearchHeroesComponent implements OnInit {
 
   private heroes:Heroe[] = [];
+  private param:String = null;
   
   constructor(
     private activatedRoute:ActivatedRoute,
@@ -19,8 +20,9 @@ export class SearchHeroesComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe( params => {
-      //console.log(params['text']);
+      this.param = params['text'];
       this.heroes = this._heroeService.searchHeroes(params['text']);
+      console.log(this.heroes);
     });
   }
 }

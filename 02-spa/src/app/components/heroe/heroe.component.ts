@@ -16,10 +16,10 @@ export class HeroeComponent implements OnInit {
     private _heroeService:HeroesService
   ) { 
     this.activatedRoute.params.subscribe( params => {
-        console.log(params);
-        console.log(params['id']);
+        //console.log(params);
+        //console.log(params['id']);
         this.heroe = _heroeService.getHeroe(params['id']);
-        console.log(this.heroe);
+        //console.log(this.heroe);
       }
     );
   }
