@@ -1,0 +1,61 @@
+<div class="row" style="margin-top:50px;">
+  <div class="col-2">
+    <img [src]="artist.images | noImage" class="img-thumbnail img-circle">
+  </div>
+  <div class="col">
+    <div *ngIf="show">
+      <h3>
+        {{artist.name}}
+      </h3>
+      <p>
+        <a [href]="artist.external_urls.spotify" target="_blank">
+          Página Artista.
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="col-4">
+    <button routerLink="/search" class="btn btn-outline-danger">
+      Regresar
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            Foto
+          </th>
+          <th>
+            Album
+          </th>
+          <th>
+            Canción
+          </th>
+          <th>
+            Vista Previa
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of topTrack">
+          <th>
+              <img [src]="item.album.images | noImage" class="img-thumbnail img-circle">
+          </th>
+          <th>
+            {{item.album.name}}
+          </th>
+          <th>
+            {{item.name}}
+          </th>
+          <th>
+            <audio [src]="item.preview_url" controls></audio>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

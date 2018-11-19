@@ -1,0 +1,22 @@
+<div class="row" style="margin-top:2em">
+  <div class="col">
+      <input #inputSearch
+            type="text" 
+            (keyup)="buscar(inputSearch.value)" 
+            class="form-control"
+            placeholder="Buscar Artista">
+  </div>
+</div>
+
+<app-cards [items]="artists"></app-cards>
+
+<!--<div class="card-columns">
+    <div *ngFor="let artist of artists" class="card">
+      <img class="card-img-top" 
+          [src]="artist.images | noImage" 
+          alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{artist.name}}</h5>
+      </div>
+    </div>
+</div>-->
