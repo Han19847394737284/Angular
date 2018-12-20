@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">
+                  Progres Bar
+                </h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.aria-valuenow] = "value" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width] = "value + '%  '" style="width: 75%"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.aria-valuenow] = "value2" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" [style.width] = "value2 + '%  '" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+              <app-incrementator (emitChangeVal)="changeProgressBar($event)" [value]="value" [history]="history"></app-incrementator>
+              <!--<div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon1" (click) = changedValue(+5)>[ + ]</button>
+                </div>
+                <input type="text" class="form-control" placeholder="" name="percentage" [(ngModel)]="percentage">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click) = changedValue(-5)>[ - ]</button>
+                </div>
+              </div>-->
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h3> {{ history }}</h3>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon1" (click)=changeValue(+5)>[ + ]</button>
+  </div>
+  <input type="text" class="form-control" placeholder="" name="percentage" (ngModelChange)="onChangeValor($event)" [(ngModel)]="percentage">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click) = changeValue(-5)>[ - ]</button>
+  </div>
+</div>
